@@ -1,0 +1,57 @@
+/* CSS Document for Grid and Table demonstration */
+
+table{
+	border-collapse: collapse;
+	width: 70%;
+	margin: auto;
+}
+
+td, th{
+	border: 1px solid #000000;
+	padding: 8px;
+}
+
+tr:nth-child(even){
+	background-color: #dddddd
+}
+
+caption{
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+.item1{grid-area: header;}
+
+.item2{grid-area: menu;}
+
+.item3{grid-area: main;}
+
+.item4{grid-area: footer;}
+
+.grid-container{
+	display: grid;
+	grid-template-areas:
+	'header header header header header header'
+	'menu main main main main'
+	'footer footer footer footer footer footer'
+	gap: 10px;
+	background-color: #111111;
+	padding: 10px;
+}
+
+.item2{height:100vh;}
+
+
+.grid-container > div {
+	background-color: #dddddd;
+	padding: 5px;
+}
+
+.item1, .item4{item-align: center;}
+
